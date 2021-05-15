@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		label
+		{
+			font-weight: bold;
+		}
+    .cc
+    {
+       
+    } 
+    .header
+    {
+      background: #003333;
+      
+    }
+    .footer
+    {
+      background: #003333;
+      height: 50px;
+    }
+    .bb
+    {
+      background: #003333;
+    }
+    h1
+    {
+      padding-top: 30px;
+    }
+    .error{border:2px solid red !important;}
+    .no_error{border:2px solid green !important}
+    .none{border:2px solid white !important}
+    /*input[class="form control error"]{border:1px solid #f00 !important;} .error p{color:#f00 !important;}*/
+	</style>
+	<title>jQ_final</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body class="bb">
+	<div class="text-center text-success  header">
+		<h1><u>Registration Form</u></h1>
+	</div>
+	<div class="container border border-success pt-5 pb-3 mt-3 md-5 cc" style="background: #00ffbf; max-width: 1000px; border-radius: 5%">
+<!--------------------------------------first name------------------------->
+		<div class="mb-3 row">
+  			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">First name:</label>
+  			<div class="col-sm-4">
+  				<input type="text" class="form-control " id="fn" placeholder="ex:bharath">
+  				<div class="row"><p class="col-sm-10" id="fn_p"></p>
+          <span class="col-sm-1 sp" id="fn_l"></span></div>
+  			</div>
+
+        <label for="exampleFormControlInput1" class="col-sm-2 col-form-label ">Last name:</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="ln" placeholder="ex:kumar">
+          <div class="row"><p class="col-sm-10" id="ln_p"></p>
+          <span class="col-sm-1 sp" id="ln_l"></span></div>
+        </div>
+
+		</div>
+<!--------------------------------------last name-------------------------
+		<div class="mb-3 row">
+  			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label ">Last name:</label>
+  			<div class="col-sm-8">
+  				<input type="text" class="form-control" id="ln">
+  				<p id="ln_p"></p>
+  			</div>
+		</div>-->
+<!-----------------------------------------user name----------------------------------->
+		<div class="mb-3 row">
+  			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">User name:</label>
+  			<div class="col-sm-4">
+  				<input type="text" class="form-control" id="un_data" placeholder="ex:Bk@12345">
+  				<div class="row"><p class="col-sm-10" id="un_p"></p>
+          <span class="col-sm-1 sp" id="un_l"></span></div>
+  			</div>
+<!-----------------------------------------email------------------------------------------>
+        <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email:</label>
+        
+        <div class="col-sm-4"><input type="email" class="form-control col-sm-3"  aria-label="Username" aria-describedby="basic-addon1" id="mail" placeholder="ex_mail@gmail.com">
+          <p id="mail_p"></p>
+        </div>
+        
+        
+    </div>
+
+		
+
+<!-----------------------------------------------------------------------------------
+		<div class="input-group mb-3">
+			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email:</label>
+  			<span class="input-group-text" id="basic-addon1">@</span>
+  			<input type="email" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" id="mail">
+  			<p id="mail_p"></p>
+  			<div class="col-sm-2"></div>
+		</div>-->
+
+   <!-- <div class="input-group mb-3">
+      <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email:</label>
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <div class="col-sm-5"><input type="email" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" id="mail"></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2"><p id="mail_p"></p></div>
+    </div>-->
+<!-------------------------------------password------------------------------------------------->
+		<div class="mb-3 row">
+    		<label for="inputPassword" class="col-sm-2 col-form-label">Enter Password:</label>
+    		<div class="col-sm-4">
+      			<input type="password" class="form-control" id="pwd">
+              <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="chk" value="" id="check_sh">
+          <label class="form-check-label" for="flexCheckDefault">
+            show password
+          </label>
+      </div>
+      			<p id="pwd_p"></p>
+    		</div>
+  		
+
+  		
+    		<label for="inputPassword" class="col-sm-2 col-form-label">Confirm Password:</label>
+    		<div class="col-sm-4">
+      			<input type="password" class="form-control" id="c_pwd">
+            <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="chk" value="" id="check_sh2">
+          <label class="form-check-label" for="flexCheckDefault">
+            show password
+          </label>
+      </div>
+      			<p id="c_pwd_p"></p>
+    		</div>
+  		</div>
+<!------------------------------------------------address---------------------------------->
+		<div class="mb-3 row">
+  			<label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Address:</label>
+  			<div class="col-sm-6">
+  				<textarea class="form-control" id="address_data" rows="3"></textarea>
+  				<div class="row"><p class="col-sm-10" id="add_p"></p>
+          <span class="col-sm-1 sp" id="add_l"></span></div>
+  			</div>
+		</div>
+<!--------------------------------------------------list box----------------------------------------------
+		<div class="mb-3 row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-2"><label for="exampleFormControlTextarea1" class="col-form-label">State:</label></div>
+			<div class="col-sm-2"><label for="exampleFormControlTextarea1" class="col-form-label">District:</label></div>
+      <div class="col-sm-2"><label for="exampleFormControlTextarea1" class="col-form-label">PIN:</label></div>
+		</div>-->
+
+		<div class="mb-3 row">
+			<div class="col-sm-2"></div>
+  			<div class="col-sm-2">
+				<select class="form-select form-select-sm ls" aria-label=".form-select-sm example" id="state_data">
+				<option selected>--Select State--</option>
+  				<option value="1">Andhra Pradesh</option>
+  				<option value="2">Telangana</option>
+  				<option value="3">Tamilnadu</option>
+				</select>
+				<p id="state_p"></p>
+			</div>
+  			<div class="col-sm-2">
+				<select class="form-select form-select-sm ls" aria-label=".form-select-sm example" id="dis_data">
+				<option selected>--Select District--</option>
+  				<option value="1">East Godavari</option>
+  				<option value="2">West Godavari</option>
+  				<option value="3">Vishaka</option>
+				</select>
+				<p id="dis_p"></p>
+			</div>
+      <div class="col-sm-2">
+          <input type="number" class="form-control" id="pin_data" placeholder="PIN Code">
+      </div><br><br>
+        <div class="col-sm-2"><p id="pin_p"></p></div>
+		</div>
+<!--------------------------------------------------pin---------------------------------------------
+		<div class="mb-3 row">
+  			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">PIN:</label>
+  			<div class="col-sm-3">
+  				<input type="number" class="form-control" id="pin_data">
+  			</div>
+  			<div class="col-sm-2"><p id="pin_p"></p></div>
+		</div>-->
+		<!--<div class="input-group mb-3 row">
+			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Phone:</label>
+			<div class="col-sm-1">
+  				<span class="input-group-text" id="basic-addon1">+91</span></div>
+  				<div class="col-sm-5"><input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+  			</div>
+		</div>-->
+
+<!---------------------------------------------------------multi select------------------------------------------>
+	<div class="mb-3 row">
+	<div class="col-sm-2">
+		<label for="exampleFormControlInput1" class="col-form-label">Locations:</label>
+	</div>
+	<div class="col-sm-4">
+				<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="mt_data" multiple>
+				<option selected>Select Preffered Locations</option>
+  				<option value="1">Kakinada</option>
+  				<option value="2">Rajahmundry</option>
+  				<option value="3">Vijayawada</option>
+  				<option value="3">Vizag</option>
+				</select>
+				<p id="mt_data_p"></p>
+	</div>
+	</div>
+
+<!--------------------------------------------------------phone----------------------------------------->
+		<div class="input-group mb-3">
+			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Phone:</label>
+  			<span class="input-group-text" id="basic-addon1">+91</span>
+  			<div class="col-sm-3"><input type="number" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" id="phn_data"></div>
+  			<div class="col-sm-1"></div>
+  			<div class="col-sm-2"><p id="phn_p"></p></div>
+		</div>
+
+<!-------------------------------------------------radio----------------------------------->
+
+		<div class="mb-3 row">
+			<label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Gender:</label>
+			<div class="form-check col-sm-2 mb-3">
+  				<input class="form-check-input" type="radio" name="flexRadioDefault" id="male_data">
+  				<label class="form-check-label" for="flexRadioDefault1">
+    				Male
+  				</label>
+  				<p id="male_data_p"></p>
+			</div>
+			<div class="form-check col-sm-2 mb-3">
+  				<input class="form-check-input" type="radio" name="flexRadioDefault" id="female_data">
+  				<label class="form-check-label" for="flexRadioDefault1">
+    				Female
+  				</label>
+  				<p id="female_data_p"></p>
+			</div>
+			<div class="form-check col-sm-2 mb-3">
+  				<input class="form-check-input" type="radio" name="flexRadioDefault" id="other_data">
+  				<label class="form-check-label" for="flexRadioDefault1">
+    				Other
+  				</label>
+  				<p id="ot_data_p"></p>
+			</div>
+		</div>
+<!---------------------------------------------------check box------------------------------------------
+		<div class="row mb-3">
+      <div class="col-sm-2">
+      <label class="form-check-label" for="flexCheckDefault">Checks:</label></div>
+      <div class="form-check col-sm-6">
+          <input class="form-check-input" type="checkbox" value="" id="check_data">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience
+          </label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-2"></div>
+      <div class="form-check col-sm-6">
+          <input class="form-check-input" type="checkbox" value="" id="check_data2">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience
+          </label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-2"></div>
+      <div class="form-check col-sm-6">
+          <input class="form-check-input" type="checkbox" value="" id="check_data3">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience
+          </label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-2"></div>
+      <div class="form-check col-sm-6">
+          <input class="form-check-input" type="checkbox" value="" id="check_data4">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience
+          </label>
+      </div>
+      <p id="check_data_p"></p>
+    </div>-->
+
+    <div class="mb-3">
+      <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" name="chk" id="check_data">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience in HTML
+          </label>
+          
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="chk" value="" id="check_data2">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience in CSS
+          </label>
+          
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="chk" value="" id="check_data3">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience in Bootstrap
+          </label>
+          
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="chk" value="" id="check_data4">
+          <label class="form-check-label" for="flexCheckDefault">
+            Please check in if you have any experience JS
+          </label>
+      </div>
+          <p id="check_data_p"></p>
+
+    </div>
+    
+<!-----------------------------------------button----------------------------------->
+		<center><button type="button" class="btn btn-primary" id="btn_data" onclick="alert('Submitted!')">Submit</button></center>
+		<p id="btn_p"></p> 
+
+</div><!-----container_close----->
+
+<div class="footer">
+  
+</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!------------------------------------jQuery CDN------------------------------------------------>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!----------------------------------------------------------------------jQuery-------------------------------------------------------------------------->
+<!------------------------requirements-------------------------------------------------
+  fn,ln -only alphabets
+username-starting letter cap and numbers optional <=8
+email-validations
+phone- =10digits
+pass and confirm pass- >=8 sp_chr+num+cap+small letter  pass==confirm pass
+address- >= 50 
+check,radio,list,multiselect-validation
+------------------------------------------------------------------------------->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  $("#fn").keyup(function(){
+    var str = $("#fn").val();
+    var letters = /^[A-Za-z]+$/;
+        if(str.match(letters) && str.length >= 3 && str.length <= 6)
+        {
+          $("#fn_p").html("First name valid");
+          $("#fn_p").css("color","green");
+          $("#fn").addClass("no_error");
+        }
+        else 
+        {
+          $("#fn_p").html("Use only Alphabets and length should be min-3 & max-6");
+          $("#fn_p").css("color","red");
+          $("#fn").addClass("error");
+        }
+        if (str.length == 0) 
+        {
+          $("#fn_p").html("");
+        }
+        $("#fn_l").html(str.length+"/6");
+    console.log(str.length);
+  });
+
+  $("#ln").keyup(function(){
+    var str = $("#ln").val();
+
+    var letters = /^[A-Za-z]+$/;
+        if(str.match(letters) && str.length >= 2 && str.length <= 5)
+        {
+          $("#ln_p").html("Last name valid");
+          $("#ln_p").css("color","green");
+          $("#ln").addClass("no_error");
+        }
+        else
+        {
+          $("#ln_p").html("Use only Alphabets and length should be min-2 & max-5");
+          $("#ln_p").css("color","red");
+          $("#ln").addClass("error");
+        }
+        if (str.length == 0) 
+        {
+          $("#ln_p").html("");
+        }
+        $("#ln_l").html(str.length+"/5");
+    });
+        $("#un_data").keyup(function(){
+          var word = $("#un_data").val();
+    /*const ab=word.split('');
+    var letters = /^[A-Z]([A-Z]|[a-z]|[0-9]){5,24}$/;*/
+
+        if(word.charCodeAt(0) >= 65 && word.charCodeAt(0) <= 90 && word.length < 8)
+        {
+          $("#un_p").html("");
+        }
+        else if(word.charCodeAt(0) >= 65 && word.charCodeAt(0) <= 90 && word.length==8)
+        {
+          $("#un_p").html("User name Valid");
+          $("#un_p").css("color","green");
+          $("#un_data").addClass("no_error");
+        }
+        else
+        {
+          $("#un_p").html("User name should be max 8 characters and first letter capital");
+          $("#un_p").css("color","red");
+          $("#un_data").addClass("error");
+        }
+        if (word.length == 0) 
+        {
+          $("#un_p").html("");
+        }
+        $("#un_l").html(word.length+"/8");
+  });
+
+     $("#pwd").keyup(function(){
+      var data = $(this).val();
+      var reg=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+  if(data.match(reg))
+  {
+    $("#pwd_p").html("Password Valid");
+        $("#pwd_p").css("color","green");
+        $("#pwd").addClass("no_error");
+  }
+  else
+  {
+    $("#pwd_p").html("Format: Atleast One uppercase letter,one lower case letter,one number,and one special character and length should be 8!");
+        $("#pwd_p").css("color","red"); 
+        $("#pwd").addClass("error");
+  }
+  if (data.length == 0) 
+        {
+          $("#pwd_p").html("");
+        }
+     });
+
+     $("#c_pwd").keyup(function(){
+
+      var a= $(this).val();
+      var b= $("#pwd").val();
+
+      if(a==b)
+      {
+         $("#c_pwd_p").html("Password Matched");
+         $("#c_pwd_p").css("color","green");
+         $("#c_pwd").addClass("no_error");
+      }
+      else
+      {
+         $("#c_pwd_p").html("Password Mismatched");
+         $("#c_pwd_p").css("color","red");
+         $("#c_pwd").addClass("error");
+      }
+        if (a.length == 0) 
+        {
+          $("#c_pwd_p").html("");
+        }
+
+     });
+
+     $("#mail").keyup(function(){
+
+      var data=$(this).val();
+      var reg=/^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,4})+$/;
+      if (data.match(reg))
+      {
+        $("#mail_p").html("Valid Email");
+         $("#mail_p").css("color","green");
+         $("#mail").addClass("no_error");
+      }
+      else
+      {
+        $("#mail_p").html("Should be in email format!");
+         $("#mail_p").css("color","red");
+         $("#mail").addClass("error");
+      }  
+        if (data.length == 0) 
+        {
+          $("#mail_p").html("");
+        }
+
+     });
+
+    $("#address_data").keyup(function(){
+
+       if($(this).val().length >= 50)
+       {
+          $("#add_p").html("Valid!");
+          $("#add_p").css("color","green");
+          $("#address_data").addClass("no_error");
+       }
+       else
+        {
+          $("#add_p").html("Min 50 characters!");
+          $("#add_p").css("color","red");
+          $("#address_data").addClass("error");
+        }
+       $("#add_l").html($(this).val().length+"/50");
+    });
+
+    $("#pin_data").keyup(function(){
+
+      if($(this).val().length > 6)
+      {
+        $("#pin_p").html("Only 6 digits!");
+        $("#pin_p").css("color","red");
+        $("#pin_data").addClass("error");
+      }
+      else if($(this).val().length == 6)
+      {
+        $("#pin_p").html("Valid!");
+        $("#pin_p").css("color","green");
+        $("#pin_data").addClass("no_error");
+      }
+      else if($(this).val().length < 6)
+      {
+        $("#pin_p").html(""); 
+      }
+        if ($(this).val().length == 0) 
+        {
+          $("#pin_p").html("");
+        }
+    });
+
+   $("#phn_data").keyup(function(){
+
+    var data=$(this).val().length;
+  
+    if(data == 10)
+    {
+      $("#phn_p").html("Valid!");
+      $("#phn_p").css("color","green");
+      $("#phn_data").addClass("no_error");
+    }
+    else if(data<10 && data!== 0)
+    {
+      $("#phn_p").html("Must have 10 digits!");
+      $("#phn_p").css("color","orange");
+    }
+    else if(data>10)
+    {
+      $("#phn_p").html("Only 10 digits!");
+      $("#phn_p").css("color","red");
+      $("#phn_data").addClass("error");
+    }
+    else if(data == 0)
+    {
+      $("#phn_p").text("");
+    }
+
+   }); 
+
+   $("#state_data").click(function () {
+            var data = $(this).val();
+            if(data=="--Select State--") 
+            {
+               $("#state_p").html(""); 
+            }
+            else
+            {
+              $("#state_p").html("Selected!");
+              $("#state_p").css("color","green");
+            }
+            return true;
+        });
+
+   $("#dis_data").click(function () {
+            var data = $(this).val();
+            if(data=="--Select District--") 
+            {
+               $("#dis_p").html(""); 
+            }
+            else
+            {
+              $("#dis_p").html("Selected!");
+              $("#dis_p").css("color","green");
+            }
+            return true;
+        });
+
+   $("#mt_data").click(function () {
+            var data = $(this).val();
+            if(data=="Select Preffered Locations") 
+            {
+               $("#mt_data_p").html(""); 
+            }
+            else
+            {
+              $("#mt_data_p").html("Selected!");
+              $("#mt_data_p").css("color","green");
+            }
+            return true;
+        });
+
+    $("#male_data").click(function(){
+      if($(this).prop("checked",true))
+      {
+        $("#male_data_p").html("Selected!");
+        $("#male_data_p").css("color","green");
+        $("#female_data_p").html(""); 
+        $("#ot_data_p").html("");
+      }
+    });
+
+    $("#female_data").click(function(){
+      if($(this).prop("checked",true))
+      {
+        $("#female_data_p").html("Selected!");
+        $("#female_data_p").css("color","green");
+        $("#male_data_p").html(""); 
+        $("#ot_data_p").html(""); 
+      }
+    });
+
+    $("#other_data").click(function(){
+      if($(this).prop("checked",true))
+      {
+        $("#ot_data_p").html("Selected!");
+        $("#ot_data_p").css("color","green"); 
+        $("#male_data_p").html(""); 
+        $("#female_data_p").html("");
+      }
+    });
+
+    $("#check_data,#check_data2,#check_data3,#check_data4").click(function(){
+    var fields = $("#check_data,#check_data2,#check_data3,#check_data4").serializeArray();
+      if(fields.length < 2)
+      {
+        $("#check_data_p").html("Please select two of them!");
+        $("#check_data_p").css("color","red"); 
+      }
+      else if(fields.length == 2)
+      {
+        $("#check_data_p").html("OK!");
+        $("#check_data_p").css("color","green");
+      }
+      else if(fields.length >2)
+      {
+        $("#check_data_p").html("you can select only 2!");
+        $("#check_data_p").css("color","red");
+      } 
+      else if(fields.length === 0)
+      {
+        $("#check_data_p").html("");
+      }  
+      console.log(fields.length);
+    });
+
+    $("#check_sh").click(function(){
+
+      //var x= $(this).val().type;
+      if($(this).prop("checked"))
+      {
+        $("#pwd").prop("type", "text");
+        //$("#pwd").replaceWith($("#pwd").clone().attr('type', 'text'));
+      }
+      else
+      {
+        $("#pwd").prop("type", "password");
+      }
+      //console.log(x);
+    });
+
+    $("#check_sh2").click(function(){
+
+      //var x= $(this).val().type;
+      if($(this).prop("checked"))
+      {
+        $("#c_pwd").prop("type", "text");
+        //$("#pwd").replaceWith($("#pwd").clone().attr('type', 'text'));
+      }
+      else
+      {
+        $("#c_pwd").prop("type", "password");
+      }
+      //console.log(x);
+    });
+
+
+}); 
+
+</script>
+
